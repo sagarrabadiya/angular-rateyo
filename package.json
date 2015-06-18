@@ -1,0 +1,19 @@
+{
+    "name": "angular-rating-yo",
+    "version": "0.0.1",
+    "description": "An angular wrapper for jquery rateyo plugin",
+    "main": "src/angular-rating-yo.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/sagarrabadiya/angular-rateyo.git"
+    },
+    "author": "Sagar rabadiya (https://github.com/sagarrabadiya)",
+    "bugs": {
+        "url": "https://github.com/sagarrabadiya/angular-rateyo/issues"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-contrib-jshint": "^0.11.2",
+        "grunt-contrib-uglify": "^0.9.1"
+    }
+}

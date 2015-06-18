@@ -1,0 +1,29 @@
+{
+    "name": "angular-rating-yo",
+    "version": "0.0.1",
+    "authors": [
+        "sagar rabadiya"
+    ],
+    "description": "The angular wrapper for jquery plugin rate yo.",
+    "main": "src/angular-rating-yo.js",
+    "keywords": [
+        "Angular",
+        "ratings",
+        "Angular",
+        "ratings",
+        "rateyo",
+        "jquery",
+        "rateyo"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery-rateyo": "~2.0.1"
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/jquery-rateyo/min/jquery.rateyo.min.js"></script>
+    <link href="../bower_components/jquery-rateyo/min/jquery.rateyo.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../src/angular-rating-yo.js"></script>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="appCtrl">
+        <rate-yo on-set="set" on-change="change" ng-model="rating" read-only="options.readOnly" options="options"></rate-yo>
+        <br>
+        <button ng-click="rating=2">Set Rating To 2</button>
+        <button ng-click="options.ratedFill='#0f0'">Change color to #0f0</button>
+        <button ng-click="options.halfStar=!options.halfStar">Toggle Half Star</button>
+        <button ng-click="options.fullStar=!options.fullStar">Toggle Full Star</button>
+        <button ng-click="options.readOnly=!options.readOnly">Toggle Read Only</button>
+    </div>
+</body>
+<script type="text/javascript">
+angular.module('app', ['rateYo'])
+    .controller('appCtrl', ['$scope', function($scope) {
+        'use strict';
+        $scope.rating = 4;
+        $scope.options = {
+            ratedFill: '#f00',
+            readOnly: false,
+            halfStar: false,
+            fullStar: false
+        };
+
+        $scope.change = function(event, data) {
+            console.log(data.rating);
+        };
+
+        $scope.set = function(event, data) {
+            alert('set event ' + data.rating);
+        };
+
+    }]);
+</script>
+
+</html>
